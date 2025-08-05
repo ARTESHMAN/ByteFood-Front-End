@@ -1,0 +1,70 @@
+.modern-button {
+    -fx-background-color: rgba(0, 0, 0, 0.5);
+    -fx-text-fill: white;
+    -fx-background-radius: 20px;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-border-width: 0;
+}
+.modern-button:hover {
+    -fx-background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modern-button:pressed {
+    -fx-background-color: rgba(0, 0, 0, 0.9);
+}
+.admin-nav-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #A7B1C3;
+    -fx-font-size: 14px;
+    -fx-alignment: center-left;
+    -fx-padding: 10 20;
+    -fx-background-radius: 5;
+}
+
+.admin-nav-button:hover {
+    -fx-background-color: #4A556A;
+    -fx-text-fill: white;
+}
+
+.admin-nav-button:focused {
+    -fx-background-color: #3F4C63;
+    -fx-text-fill: white;
+    -fx-border-color: #5C95E3;
+    -fx-border-width: 0 0 0 3;
+}
+.seller-nav-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #FADBD8;
+    -fx-font-size: 14px;
+    -fx-alignment: center-left;
+    -fx-padding: 10 20;
+    -fx-background-radius: 5;
+}
+.seller-nav-button:hover {
+    -fx-background-color: #E67E22;
+    -fx-text-fill: white;
+}
+.favorite-toggle-button {
+    -fx-background-color: #AAAAAA;
+    -fx-min-width: 28px;
+    -fx-min-height: 28px;
+    -fx-pref-width: 28px;
+    -fx-pref-height: 28px;
+    -fx-shape: "M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z";
+    -fx-background-insets: 0;
+    -fx-border-color: transparent;
+    -fx-cursor: hand;
+}
+
+.favorite-toggle-button:hover {
+    -fx-background-color: #888888;
+}
+.favorite-toggle-button:selected {
+    -fx-background-color: #FFC107;
+    -fx-shape: "M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27z";
+}
+
+.favorite-toggle-button:selected:hover {
+    -fx-background-color: #FFB300;
+}

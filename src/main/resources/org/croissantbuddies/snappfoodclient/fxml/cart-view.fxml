@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<?import javafx.scene.control.TextField?>
+<VBox alignment="TOP_CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.croissantbuddies.snappfoodclient.controller.CartViewController">
+    <padding>
+        <Insets left="20" right="20" top="20" bottom="20"/>
+    </padding>
+
+    <Label text="My Shopping Cart">
+        <font>
+            <Font name="Arial Bold" size="24.0" />
+        </font>
+    </Label>
+
+    <TableView fx:id="cartTable" prefHeight="400.0">
+        <columns>
+            <TableColumn fx:id="foodNameColumn" prefWidth="250.0" text="Food Item" />
+            <TableColumn fx:id="quantityColumn" prefWidth="100.0" text="Quantity" />
+            <TableColumn fx:id="priceColumn" prefWidth="150.0" text="Price per Item" />
+            <TableColumn fx:id="totalPriceColumn" prefWidth="150.0" text="Total Price" />
+            <TableColumn fx:id="actionsColumn" prefWidth="150.0" text="Actions" />
+        </columns>
+    </TableView>
+
+    <HBox alignment="CENTER_RIGHT" spacing="20.0">
+        <VBox alignment="CENTER_RIGHT" spacing="5.0">
+            <Label fx:id="subTotalLabel" text="Subtotal: 0.00">
+                <font><Font name="System" size="14.0" /></font>
+            </Label>
+            <Label fx:id="feesLabel" text="Tax &amp; Packaging: 0.00">
+                <font><Font name="System" size="14.0" /></font>
+            </Label>
+            <Label fx:id="finalPriceLabel" text="Total: 0.00">
+                <font><Font name="System Bold" size="18.0" /></font>
+            </Label>
+        </VBox>
+        <Button fx:id="checkoutButton" onAction="#handleCheckout" text="Proceed to Checkout" style="-fx-font-size: 16px;"/>
+    </HBox>
+    <HBox alignment="CENTER_LEFT" spacing="10.0" maxWidth="350" style="-fx-padding: 0 0 10 0;">
+        <children>
+            <TextField fx:id="couponField" promptText="discount code:" HBox.hgrow="ALWAYS" />
+            <Button onAction="#handleApplyCoupon" text="process" />
+        </children>
+    </HBox>
+
+</VBox>

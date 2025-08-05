@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.croissantbuddies.snappfoodclient.controller.WaitingForApprovalController">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+    <children>
+        <Label text="waiting for admin" textFill="#2c3e50">
+            <font>
+                <Font name="Arial Bold" size="28.0" />
+            </font>
+        </Label>
+        <Label text="Waiting for admin approval" wrapText="true" />
+        <Button onAction="#handleLogout" text="Logout" prefWidth="100.0" />
+    </children>
+</VBox>

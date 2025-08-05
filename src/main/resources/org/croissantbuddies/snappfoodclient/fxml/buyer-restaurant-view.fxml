@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="544.0" prefWidth="630.0" spacing="10.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.croissantbuddies.snappfoodclient.controller.BuyerRestaurantViewController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <HBox alignment="CENTER_LEFT" spacing="20.0">
+        <Label fx:id="restaurantNameLabel" text="Restaurant Name">
+            <font><Font name="System Bold" size="24.0" /></font>
+        </Label>
+        <Label fx:id="avgRatingLabel" style="-fx-font-size: 16px; -fx-text-fill: #f39c12;">
+            <font><Font name="System Bold" size="16.0" /></font>
+        </Label>
+        <HBox HBox.hgrow="ALWAYS" />
+        <Button fx:id="backButton" onAction="#handleBack" text="&lt; Back to Restaurants" />
+    </HBox>
+    <Separator prefWidth="200.0" />
+
+    <TabPane tabClosingPolicy="UNAVAILABLE" VBox.vgrow="ALWAYS">
+        <tabs>
+            <Tab text="Menu">
+                <ScrollPane fitToWidth="true" VBox.vgrow="ALWAYS">
+                    <VBox fx:id="menuVBox" spacing="5" />
+                </ScrollPane>
+            </Tab>
+            <Tab text="Reviews">
+                <ScrollPane fitToWidth="true" VBox.vgrow="ALWAYS">
+                    <VBox fx:id="reviewsContainer" spacing="10" style="-fx-padding: 10;" />
+                </ScrollPane>
+            </Tab>
+        </tabs>
+    </TabPane>
+</VBox>

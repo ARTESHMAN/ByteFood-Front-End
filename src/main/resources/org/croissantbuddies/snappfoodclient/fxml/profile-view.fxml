@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:controller="org.croissantbuddies.snappfoodclient.controller.ProfileController" alignment="TOP_CENTER" spacing="15.0" style="-fx-background-color: #FDFEFE;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+    <padding><Insets bottom="20.0" left="40.0" right="40.0" top="20.0" /></padding>
+
+    <Label text="Edit My Profile">
+        <font><Font name="Arial Bold" size="24.0" /></font>
+    </Label>
+
+    <VBox alignment="CENTER" spacing="10.0">
+        <ImageView fx:id="profileImageView" fitHeight="100.0" fitWidth="100.0" preserveRatio="true" />
+        <Button onAction="#handleChooseImage" text="Choose Profile Picture" />
+    </VBox>
+
+    <GridPane hgap="10" vgap="10" maxWidth="400">
+        <Label text="Full Name:" GridPane.rowIndex="0" />
+        <TextField fx:id="fullNameField" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+        <Label text="Phone:" GridPane.rowIndex="1" />
+        <TextField fx:id="phoneField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+        <Label text="Email:" GridPane.rowIndex="2" />
+        <TextField fx:id="emailField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+        <Label text="Address:" GridPane.rowIndex="3" />
+        <TextField fx:id="addressField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+        <Label text="Bank Name:" GridPane.rowIndex="4" />
+        <TextField fx:id="bankNameField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+        <Label text="Account Number:" GridPane.rowIndex="5" />
+        <TextField fx:id="accountNumberField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+    </GridPane>
+
+    <Button onAction="#handleSaveChanges" style="-fx-background-color: #2ECC71; -fx-text-fill: white;" text="Save Changes" />
+    <Label fx:id="statusLabel" textFill="#2ECC71" />
+
+    <Separator prefWidth="200.0">
+        <VBox.margin>
+            <Insets top="20.0" bottom="10.0" />
+        </VBox.margin>
+    </Separator>
+
+    <VBox alignment="CENTER" spacing="10.0" maxWidth="400">
+        <Label text="My Wallet">
+            <font><Font name="Arial Bold" size="18.0" /></font>
+        </Label>
+        <Label fx:id="currentBalanceLabel" text="Current Balance: 0.00" style="-fx-font-size: 14px; -fx-text-fill: #2C3E50;">
+            <font><Font name="System Bold" size="14.0" /></font>
+        </Label>
+        <HBox alignment="CENTER_LEFT" spacing="10.0">
+            <Label text="Top-up Amount:" />
+            <TextField fx:id="topUpAmountField" promptText="e.g., 50000" HBox.hgrow="ALWAYS" />
+            <Button onAction="#handleTopUpWallet" text="Add to Wallet" style="-fx-background-color: #3498DB; -fx-text-fill: white;" />
+        </HBox>
+    </VBox>
+</VBox>

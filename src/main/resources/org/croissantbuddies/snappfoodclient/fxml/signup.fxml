@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" stylesheets="@../styles/styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.croissantbuddies.snappfoodclient.controller.SignupController">
+   <children>
+      <ImageView fitHeight="609.0" fitWidth="800.0" layoutY="-1.0">
+         <image>
+            <Image url="@../images/Beef%20Burrito%20Recipe%20with%20Cheese%20and%20Fresh%20Toppings.jpg" />
+         </image>
+      </ImageView>
+      <TextField fx:id="fullNameField" layoutX="93.0" layoutY="98.0" prefHeight="43.0" prefWidth="217.0" promptText="full name" styleClass="modern-button" />
+      <TextField fx:id="phoneField" layoutX="93.0" layoutY="158.0" prefHeight="43.0" prefWidth="217.0" promptText="phone" styleClass="modern-button" />
+      <PasswordField fx:id="passwordField" layoutX="90.0" layoutY="222.0" prefHeight="43.0" prefWidth="217.0" promptText="password" styleClass="modern-button" />
+      <TextField fx:id="addressField" layoutX="90.0" layoutY="279.0" prefHeight="43.0" prefWidth="217.0" promptText="address" styleClass="modern-button" />
+      <ComboBox fx:id="roleComboBox" layoutX="93.0" layoutY="342.0" prefHeight="43.0" prefWidth="217.0" promptText="role" styleClass="modern-button" />
+      <Button layoutX="145.0" layoutY="404.0" mnemonicParsing="false" onAction="#onSignupButtonClick" prefHeight="50.0" prefWidth="114.0" styleClass="modern-button" text="SIGN UP" />
+      <Button layoutX="33.0" layoutY="525.0" mnemonicParsing="false" onAction="#previousPage" prefHeight="43.0" prefWidth="100.0" styleClass="modern-button" text="Back" />
+      <ImageView fitHeight="497.0" fitWidth="410.0" layoutX="342.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Gemini_Generated_Image_4rghby4rghby4rgh-fotor-bg-remover-20250719222022.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="errorLabel" alignment="CENTER" layoutX="93.0" layoutY="470.0" prefWidth="217.0" textFill="RED" wrapText="true" />
+   </children>
+</Pane>

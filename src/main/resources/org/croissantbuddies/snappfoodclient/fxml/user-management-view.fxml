@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.geometry.Insets?>
+
+<VBox alignment="TOP_CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.croissantbuddies.snappfoodclient.controller.UserManagementController">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+    <children>
+        <Label text="User Management">
+            <font>
+                <Font name="Arial Bold" size="24.0" />
+            </font>
+        </Label>
+        <TableView fx:id="usersTable" prefHeight="500.0" prefWidth="760.0">
+            <columns>
+                <TableColumn fx:id="idColumn" prefWidth="40.0" text="ID" />
+                <TableColumn fx:id="fullNameColumn" prefWidth="130.0" text="Full Name" />
+                <TableColumn fx:id="phoneColumn" prefWidth="110.0" text="Phone" />
+                <TableColumn fx:id="emailColumn" prefWidth="150.0" text="Email" />
+                <TableColumn fx:id="roleColumn" prefWidth="80.0" text="Role" />
+                <TableColumn fx:id="statusColumn" prefWidth="80.0" text="Status" />
+                <TableColumn fx:id="actionsColumn" prefWidth="150.0" text="Actions" />
+            </columns>
+        </TableView>
+    </children>
+</VBox>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.croissantbuddies.snappfoodclient.controller.OrderManagementController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <children>
+        <Label text="Order Management">
+            <font>
+                <Font name="Arial Bold" size="24.0" />
+            </font>
+        </Label>
+        <TableView fx:id="ordersTable" prefHeight="500.0">
+            <columns>
+                <TableColumn fx:id="idColumn" prefWidth="40.0" text="ID" />
+                <TableColumn fx:id="addressColumn" prefWidth="150.0" text="Delivery Address" />
+                <TableColumn fx:id="buyerNameColumn" prefWidth="120.0" text="Buyer Name" />
+                <TableColumn fx:id="vendorNameColumn" prefWidth="120.0" text="Restaurant Name" />
+                <TableColumn fx:id="priceColumn" prefWidth="80.0" text="Pay Price" />
+                <TableColumn fx:id="statusColumn" prefWidth="110.0" text="Status" />
+                <TableColumn fx:id="createdAtColumn" prefWidth="130.0" text="Created At" />
+                <TableColumn fx:id="actionsColumn" prefWidth="120.0" text="Actions" />
+            </columns>
+        </TableView>
+    </children>
+</VBox>

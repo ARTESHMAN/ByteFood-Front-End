@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<?import javafx.scene.control.DatePicker?>
+<VBox alignment="TOP_CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.croissantbuddies.snappfoodclient.controller.OrderHistoryController">
+    <padding>
+        <Insets bottom="20" left="20" right="20" top="20" />
+    </padding>
+
+    <Label text="My Order History">
+        <font>
+            <Font name="Arial Bold" size="24.0" />
+        </font>
+    </Label>
+
+    <HBox alignment="CENTER_LEFT" spacing="10.0">
+        <Label text="Filter by Status:" />
+        <ComboBox fx:id="statusFilterComboBox" prefWidth="150.0" promptText="All Statuses" />
+
+        <Label text="From:" />
+        <DatePicker fx:id="startDatePicker" prefWidth="120.0" />
+        <Label text="To:" />
+        <DatePicker fx:id="endDatePicker" prefWidth="120.0" />
+        <Button onAction="#handleFilter" text="Filter" />
+    </HBox>
+
+    <TableView fx:id="ordersTable" prefHeight="500.0">
+        <columns>
+            <TableColumn fx:id="idColumn" prefWidth="80.0" text="Order ID" />
+            <TableColumn fx:id="vendorNameColumn" prefWidth="180.0" text="Restaurant Name" />
+            <TableColumn fx:id="priceColumn" prefWidth="120.0" text="Final Price" />
+            <TableColumn fx:id="statusColumn" prefWidth="150.0" text="Status" />
+            <TableColumn fx:id="createdAtColumn" prefWidth="200.0" text="Date" />
+            <TableColumn fx:id="actionsColumn" prefWidth="120.0" text="Actions" />
+        </columns>
+    </TableView>
+
+</VBox>

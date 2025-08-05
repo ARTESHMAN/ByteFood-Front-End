@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.croissantbuddies.snappfoodclient.controller.TransactionManagementController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <children>
+        <Label text="Transaction Management">
+            <font>
+                <Font name="Arial Bold" size="24.0" />
+            </font>
+        </Label>
+        <TableView fx:id="transactionsTable" prefHeight="500.0">
+            <columns>
+                <TableColumn fx:id="idColumn" prefWidth="70.0" text="ID" />
+                <TableColumn fx:id="orderIdColumn" prefWidth="100.0" text="Order ID" />
+
+                <TableColumn fx:id="buyerNameColumn" prefWidth="180.0" text="Buyer Name" />
+                <TableColumn fx:id="sellerNameColumn" prefWidth="180.0" text="Seller Name" />
+
+                <TableColumn fx:id="methodColumn" prefWidth="120.0" text="Method" />
+                <TableColumn fx:id="statusColumn" prefWidth="120.0" text="Status" />
+            </columns>
+        </TableView>
+    </children>
+</VBox>

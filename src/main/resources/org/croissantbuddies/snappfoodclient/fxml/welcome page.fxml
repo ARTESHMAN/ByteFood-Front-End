@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.croissantbuddies.snappfoodclient.controller.WelcomeController">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="800.0">
+         <image>
+            <Image url="@../images/burger.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="325.0" fitWidth="346.0" layoutX="227.0" layoutY="24.0">
+         <image>
+            <Image url="@../images/Gemini_Generated_Image_wy8f54wy8f54wy8f-fotor-bg-remover-20250719122123.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="234.0" layoutY="310.0" mnemonicParsing="false" onAction="#switchToLoginPage" prefHeight="49.0" prefWidth="307.0" styleClass="modern-button" text="Login">
+         <font>
+            <Font name="Bell MT" size="30.0" />
+         </font>
+      </Button>
+      <Button layoutX="234.0" layoutY="366.0" mnemonicParsing="false" onAction="#switchToSignupPage" prefHeight="49.0" prefWidth="307.0" styleClass="modern-button" text="SIGN UP">
+         <font>
+            <Font name="Bell MT" size="26.0" />
+         </font>
+      </Button>
+   </children>
+   <stylesheets>
+      <URL value="@../styles/styles.css" />
+   </stylesheets>
+</Pane>

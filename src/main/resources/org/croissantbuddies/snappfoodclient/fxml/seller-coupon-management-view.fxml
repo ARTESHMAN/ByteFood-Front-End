@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.croissantbuddies.snappfoodclient.controller.SellerCouponManagementController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <children>
+        <HBox alignment="CENTER_LEFT" spacing="10.0">
+            <Label text="Coupon Management">
+                <font>
+                    <Font name="Arial Bold" size="24.0" />
+                </font>
+            </Label>
+            <HBox HBox.hgrow="ALWAYS" />
+            <Button onAction="#handleAddNewCoupon" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" text="+ Add New Coupon" />
+        </HBox>
+        <TableView fx:id="couponsTable" prefHeight="450.0">
+            <columns>
+                <TableColumn fx:id="idColumn" prefWidth="40.0" text="ID" />
+                <TableColumn fx:id="codeColumn" prefWidth="120.0" text="Code" />
+                <TableColumn fx:id="typeColumn" prefWidth="70.0" text="Type" />
+                <TableColumn fx:id="valueColumn" prefWidth="70.0" text="Value" />
+                <TableColumn fx:id="minPriceColumn" prefWidth="80.0" text="Min Price" />
+                <TableColumn fx:id="countColumn" prefWidth="60.0" text="Count" />
+                <TableColumn fx:id="startColumn" prefWidth="100.0" text="Start Date" />
+                <TableColumn fx:id="endColumn" prefWidth="100.0" text="End Date" />
+                <TableColumn fx:id="actionsColumn" prefWidth="120.0" text="Actions" />
+            </columns>
+        </TableView>
+    </children>
+</VBox>
